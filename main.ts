@@ -8,7 +8,7 @@ enum dht11type {
 }
 
 //% color=#F6421B icon="\uf2c9" block="dht11"
-namespace dht11 {
+namespace DHT11 {
     let temp = 0
     let pin = DigitalPin.P0;
     function signal_dht11(pin: DigitalPin): void {
