@@ -62,7 +62,7 @@ namespace dht11 {
             case dht11type.Celsius:
                 return (temp & 0x0000ff00) >> 8;
             case dht11type.Fahrenheit:
-                return (temp & 0x0000ff00) >> 8 * 9 / 5 + 32;
+                return ((temp & 0x0000ff00) >> 8) * 9 / 5 + 32;
             case dht11type.humidity:
                 return temp >> 24;
             default:
