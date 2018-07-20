@@ -19,10 +19,10 @@ namespace dht11 {
 
     }
 
-/**
- * Set up the sensor and start reading data.
- * 
- */
+    /**
+     * Set up the sensor and start reading data.
+     * 
+     */
     //% block="Start reading data from pin %pinarg"
     //% blockId=reading_dht11_data
     export function dht11_read(pin_arg: DigitalPin): void {
@@ -51,17 +51,17 @@ namespace dht11 {
         temp = value
     }
 
-/** Show specific data after reading from thr DHT11.  
- *  
-*/
-    //% block="DHT11 set pin %pinarg|get %data_type"
+    /** Show specific data after reading from thr DHT11.  
+     *  
+    */
+    //% block="DHT11 get %data_type"
     //% blockId=showing_dht11_data
-    export function showingData(pinarg: DigitalPin, data_type: dht11type): number{
+    export function showingData(data_type: dht11type): number {
         switch (data_type) {
             case dht11type.Celsius:
-                return temp & 0x0000ff00 >> 8;
+                return (temp & 0x0000ff00 >> 8);
             case dht11type.Fahrenheit:
-                return (temp & 0x0000ff00 >> 8) * 9 / 5 + 32;
+                return ((temp & 0x0000ff00 >> 8) * 9 / 5 + 32);
             case dht11type.humidity:
                 return temp >> 24;
             default:
