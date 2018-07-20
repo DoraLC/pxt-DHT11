@@ -5,7 +5,9 @@ Driver for the DHT11 Temperature and Humidity Sensor
 ## License
 
 * MIT
-* MonadnockSystems (https://github.com/MonadnockSystems/pxt-dht11)
+```package
+forked from https://github.com/MonadnockSystems/pxt-dht11
+```
 
 ## Supported targets
 
