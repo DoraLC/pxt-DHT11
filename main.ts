@@ -59,11 +59,11 @@ namespace dht11 {
     //% blockId=showing_dht11_data
     export function showingData(data_type: dht11type): number {
         switch (data_type) {
-            case dht11type.Celsius:
+            case 0:
                 return (temp & 0x0000ff00) >> 8;
-            case dht11type.Fahrenheit:
+            case 1:
                 return ((temp & 0x0000ff00) >> 8) * 9 / 5 + 32;
-            case dht11type.humidity:
+            case 2:
                 return temp >> 24;
             default:
                 return 0;
