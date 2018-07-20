@@ -25,6 +25,7 @@ namespace dht11 {
      */
     //% block="Start reading data from pin %pinarg"
     //% blockId=reading_dht11_data
+    //% weight = 0
     export function dht11_read(pin_arg: DigitalPin): void {
         basic.pause(1000)
         pin = pin_arg;
@@ -59,9 +60,9 @@ namespace dht11 {
     export function showingData(data_type: dht11type): number {
         switch (data_type) {
             case dht11type.Celsius:
-                return (temp & 0x0000ff00 >> 8);
+                return (temp & 0x0000ff00) >> 8;
             case dht11type.Fahrenheit:
-                return ((temp & 0x0000ff00 >> 8) * 9 / 5 + 32);
+                return (temp & 0x0000ff00) >> 8 * 9 / 5 + 32;
             case dht11type.humidity:
                 return temp >> 24;
             default:
