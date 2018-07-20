@@ -25,7 +25,7 @@ namespace dht11 {
      */
     //% block="Start reading data from pin %pinarg"
     //% blockId=reading_dht11_data
-    //% weight = 0
+    //% weight=0
     export function dht11_read(pin_arg: DigitalPin): void {
         basic.pause(1000)
         pin = pin_arg;
