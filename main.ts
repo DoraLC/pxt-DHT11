@@ -25,6 +25,8 @@ namespace DHT11 {
      */
     //% block="Start reading data from pin %pinarg"
     //% blockId=reading_dht11_data
+    //% pin_arg.fieldEditor="gridpicker" pin_arg.fieldOptions.columns=5
+    //% pin_arg.fieldOptions.tooltips="false"
     //% weight=0
     export function dht11_read(pin_arg: DigitalPin): void {
         basic.pause(1000)
